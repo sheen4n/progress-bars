@@ -1,5 +1,5 @@
 window.endpointConfig = {
-  buttons: [10, 38, -13, -18],
-  bars: [20, 250, 49],
-  limit: 100,
+  buttons: [46, 48, -28, -38],
+  bars: [42, 59, 47, 47],
+  limit: 130,
 };
