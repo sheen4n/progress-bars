@@ -1,5 +1,6 @@
 {
   "name": "progress-bars",
+  "homepage": "http://sheen4n.github.io/progress-bars",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,7 +10,9 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "scripts": {
     "start": "react-scripts start",
