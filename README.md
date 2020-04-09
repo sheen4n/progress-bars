@@ -1,3 +1,14 @@
+Visit (http://sheen4n.github.io/progress-bars) for Live Demo of the Application.
+
+To change the endpoints for testing, visit : https://github.com/sheen4n/progress-bars/blob/gh-pages/endpoint.js and create a fork request
+
+Or clone the project and change the endpoint after deploying (it is a public file)
+
+To build and run the project for development purposes , refer to the guide below.
+
+------
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
