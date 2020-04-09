@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ProgressBars from './components/progressBars';
+import { validateData } from './validation/validateEndpoint';
+import ErrorPage from './components/errorPage';
 
 function App() {
+  const isValidData = validateData(window.endpointConfig);
+  if (!isValidData || !window.endpointConfig) return <ErrorPage />;
+
+  const { buttons, bars, limit } = window.endpointConfig;
+  const barsData = bars.map((bar, i) => {
+    return { id: `${i}`, name: `Progress ${i + 1}`, value: bar };
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className='container'>
+        <ProgressBars buttons={buttons} barsData={barsData} limit={limit} />
+      </div>
     </div>
   );
 }

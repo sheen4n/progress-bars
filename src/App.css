@@ -2,37 +2,51 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.progress-wrapper {
+  position: relative;
+  height: 3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.progress-wrapper:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.progress-value {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: calc(1rem / 1.5);
+  line-height: 1rem;
+  font-weight: bold;
+}
+.progress.is-large + .progress-value {
+  font-size: calc(1.5rem / 1.5);
+  line-height: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .progress.is-large + .progress-value {
+    font-size: 12px;
+    top: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.progress::-webkit-progress-value {
+  transition: width 0.5s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.progress.is-large {
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.progress.is-selected {
+  box-shadow: 0 0 3pt 2pt red;
+}
+
+.card {
+  border: 1px solid black;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  padding: 2.5rem;
 }
