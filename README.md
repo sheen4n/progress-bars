@@ -6,6 +6,10 @@ Or clone the project and change the endpoint after deploying (it is a public fil
 
 To build and run the project for development purposes , refer to the guide below.
 
+![Screenshot](progress-bar-screenshot.jpg)
+
+
+
 ------
 
 
